@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hans Holbein</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body class="body2">
+    <header>
+      <h1>Hans Holbein - Młodszy</h1>
+      <nav>
+        <ul>
+          <li><a href="#g">Galeria</a></li>
+          <li><a href="#b">Biografia</a></li>
+          <li><a href="#p">Dzieła</a></li>
+          <li><a href="#w">Ciekawostki</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="g">
+        <h2>Galeria</h2>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div><br>
+            <img src="Foto/HH1.jpg"  />
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div><br>
+            <img src="Foto/HH2.jpg"  />
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div><br>
+            <img src="Foto/HH3.jpg"  />
+          </div>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+      <section id="b">
+        <h2>Biografia</h2>
+        <p>
+          Hans Holbein Młodszy, urodzony około 1497 roku w Augsburgu, Niemcy, był wybitnym malarzem renesansowym, który zdobył sławę przede wszystkim jako portrecista i ilustrator. Jego niezwykłe umiejętności artystyczne przyczyniły się do ustanowienia go jednym z najbardziej cenionych malarzy XVI wieku.
+          <br /><br />
+          Hans Holbein Młodszy, syn Hansa Holbeina Starszego, w młodości zdobył edukację artystyczną w rodzinnym Augsburgu. Później osiedlił się w Bazylei, gdzie pracował jako malarz i ilustrator. Jego dzieła zdobyły uznanie za precyzję i wyrafinowanie stylu.
+          <br /><br />
+          W 1526 roku, zainspirowany rosnącym zainteresowaniem sztuką w Anglii, Holbein przeniósł się do Londynu. Szybko zdobył uznanie na dworze Henryka VIII, tworząc portrety króla, jego rodziny oraz innych wpływowych postaci.
+          <br /><br />
+          Jego technika realistycznego oddawania detali sprawiła, że portrety Holbeina stały się nie tylko dokładnym odzwierciedleniem fizycznej urody osób, ale również fascynującym zapisem psychologii postaci. Jego prace przewyższały tradycyjne konwencje portretowe, łącząc realizm z subtelnym przekazem charakteru.
+          <br /><br />
+          Holbein nie ograniczał się tylko do portretów; był również utalentowanym ilustratorem, tworząc miniaturowe portrety, ilustracje książkowe, a także dzieła o tematyce religijnej i alegorycznej.
+          <br /><br />
+          Malarz zmarł w Londynie w 1543 roku, pozostawiając po sobie bogate dziedzictwo artystyczne, które nadal inspiruje i fascynuje miłośników sztuki na całym świecie. Jego dzieła są nie tylko wybitnym przykładem sztuki renesansowej, ale także nieocenionym źródłem wiedzy o epoce tudorskiej.
+        </p>
+      </section>
+
+      <section id="p">
+        <h2>Dzieła</h2>
+        <table>
+          <tr>
+            <td>Dzieło sztuki</td>
+            <td>Czas powstania</td>
+          </tr>
+          <tr>
+            <td>Ambasadorowie</td>
+            <td>1533</td>
+          </tr>
+          <tr>
+            <td>Portret Erazma z Rotterdamu</td>
+            <td>1523</td>
+          </tr>
+          <tr>
+            <td>Portret Henryka VIII</td>
+            <td>1536–1537</td>
+          </tr>
+          <tr>
+            <td>Portret Tomasza Morusa</td>
+            <td>1527</td>
+          </tr>
+          <tr>
+            <td>Dama z wiewiórką i szpakiem</td>
+            <td>1526-1528</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="w">
+        <h2>Ciekawostki</h2>
+        <ol>
+          <li>Na twórczość Holbeina wpływ miała sztuka Hansa Baldunga Griena oraz Matthiasa Grünewalda. </li>
+          <li>Inspirowała go również sztuka włoska z czasów dojrzałego renesansu.</li>
+          <li>Pomimo swojej znaczącej roli w sztuce renesansowej, Holbein Młodszy nie pozostawił wielu zachowanych dzieł. To sprawia, że każde istniejące dzieło staje się jeszcze cenniejsze dla historyków sztuki.</li>
+          <li>Holbein był w bliskich kontaktach z takimi humanistami, jak Erazm z Rotterdamu, Tomasz More, Bonifacius Amerbach, był też ilustratoremł "Pochwały głupoty" Erazma z Rotterdamu oraz Biblii Lutra </li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 9000);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">7 Najwspanialszych Artystów Świata</div>
+      <div class="menu">
+        <a href="leonardo.html" target="rama"> Leonardo da Vinci </a>
+        <a href="bosch.html" target="rama"> Hieronim Bosch </a>
+        <a href="holbein.html" target="rama"> Hans Holbein </a>
+        <a href="vangogh.html" target="rama"> Vincent van Gogh </a>
+        <a href="picasso.html" target="rama"> Pablo Picasso </a>
+        <a href="warhol.html" target="rama"> Andy Warhol </a>
+        <a href="beksinski.html" target="rama"> Zdzisław Beksiński </a>
+      </div>
+      <div class="aside">
+        <iframe
+          src="leonardo.html"
+          name="rama"
+          width="100%"
+          height="100%"
+          frameborder="0"
+        >
+        </iframe>
+      </div>
+
+      <div class="menu2">
+        <a href="ankieta.html" target="rama">
+          Ankieta
+        </a>
+
+        <a
+          href="https://www.youtube.com/watch?v=BU8JdsjrgiE&ab_channel=Wendigoon"
+          >Tajemnica Śmierci van Gogh'a
+        </a>
+
+        <a
+          href="https://www.polskieradio.pl/39/156/artykul/1056152,andy-warhol-mistrz-popartu"
+        >
+          Mistrz pop-artu Andy Warhol
+        </a>
+        <a href="https://culture.pl/pl/tworca/zdzislaw-beksinski"
+          >Życie i twórczość Zdzisława Beksińskiego
+        </a>
+      </div>
+      <div class="footer">Wiktoria Kania 2ta</div>
+      <script>
+        window.onscroll = function () {
+          myFunction();
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

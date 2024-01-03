@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Zdzisław Beksiński</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body class="body2">
+    <header>
+      <h1>Zdzisław Beksiński</h1>
+      <nav>
+        <ul>
+          <li><a href="#g">Galeria</a></li>
+          <li><a href="#b">Biografia</a></li>
+          <li><a href="#p">Dzieła</a></li>
+          <li><a href="#w">Ciekawostki</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="g">
+        <h2>Galeria</h2>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <br />
+            <img src="Foto/ZB1.jpg" />
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <br />
+            <img src="Foto/ZB2.jpg" />
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <br />
+            <img src="Foto/ZB3.jpg" />
+          </div>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+      <section id="b">
+        <h2>Biografia</h2>
+        <p>
+          Zdzisław Beksiński, urodzony 24 lutego 1929 roku w Sanoku, Polska, to wybitny malarz i rzeźbiarz, uznawany za jednego z najważniejszych artystów surrealizmu i fantastyki w Polskim i światowym kontekście.
+          <br /><br />
+          Beksiński rozpoczął swoją karierę artystyczną jako rzeźbiarz, ale to jego prace malarskie, szczególnie te z okresu późniejszego, przyniosły mu międzynarodową sławę. Jego twórczość charakteryzuje się mrocznym i surrealistycznym stylem, często eksplorującym tematykę kosmiczną, fantastyczne krajobrazy oraz groteskowe postacie.
+          <br /><br />
+          Artysta nie ograniczał się do jednego medium, tworząc również rzeźby, fotografie oraz eksperymentując z techniką cyfrową. Jego prace wywołują mieszane emocje, balansując między pięknem a przerażeniem.
+          <br /><br />
+          Artysta nie ograniczał się do jednego medium, tworząc również rzeźby, fotografie oraz eksperymentując z techniką cyfrową. Jego prace wywołują mieszane emocje, balansując między pięknem a przerażeniem.
+          <br /><br />
+          Niestety, życie Beksińskiego zakończyło się tragicznie  Został zamordowany w swoim domu w Warszawie w 2005 roku. Mimo tego dramatycznego zakończenia, jego sztuka pozostaje ważnym elementem dziedzictwa kulturowego, zainspirowanym tajemniczym i niepokojącym pięknem. Jego dzieła znajdują się w wielu kolekcjach sztuki na całym świecie, pozostawiając niezatarty ślad w historii sztuki współczesnej.
+          <br /><br />
+        </p>
+      </section>
+
+      <section id="p">
+        <h2>Dzieła</h2>
+        <table>
+          <tr>
+            <td>Dzieło sztuki</td>
+            <td>Czas powstania</td>
+          </tr>
+          <tr>
+            <td>AE73</td>
+            <td>1972</td>
+          </tr>
+          <tr>
+            <td>AA80</td>
+            <td>1980</td>
+          </tr>
+          <tr>
+            <td>AA72</td>
+            <td>1972</td>
+          </tr>
+          <tr>
+            <td>AG81</td>
+            <td>1981</td>
+          </tr>
+          <tr>
+            <td>WZ</td>
+            <td>1985</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="w">
+        <h2>Ciekawostki</h2>
+        <ol>
+          <li>Unikał oglądania dzieł innych artystów. Nie chciał się nimi podświadomie sugerować.</li>
+          <li>
+            Był prawdziwym pasjonatem komputerów.
+          </li>
+          <li>Swoją prywatną kolekcję własnych obrazów nazywał „zwierzętami domowymi”.</li>
+          <li>
+            Nigdy nie pojawił się na swoim wernisażu, bo było to dla niego zbyt stresujące.
+          </li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 9000);
+      }
+    </script>
+  </body>
+</html>
