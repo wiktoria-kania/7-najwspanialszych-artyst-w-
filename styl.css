@@ -401,7 +401,8 @@ input[type="reset"] {
     font-weight: bold;
   }
   .menu a {
-    padding: 2.5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     width: 100%;
   }
   .menu2 {
@@ -424,7 +425,8 @@ input[type="reset"] {
   }
 
   .menu2 a {
-    padding: 2.5vw;
+   padding-top: 5vw;
+    padding-bottom: 5vw;
     width: 100%;
   }
   .aside {
